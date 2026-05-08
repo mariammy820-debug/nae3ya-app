@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #3b82f6;
+  --color-brand-secondary: #6366f1;
+  --color-brand-bg: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-slate-900 antialiased;
+  }
+}
+
+/* كارت احترافي بتأثير زجاجي بسيط */
+.feature-card {
+  @apply bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl shadow-slate-200/50 
+         hover:shadow-2xl hover:shadow-brand-primary/10 hover:-translate-y-2 transition-all duration-500;
+}
+
+/* تدرج لوني للنصوص العريضة */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-secondary;
+}
